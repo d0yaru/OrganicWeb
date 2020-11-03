@@ -158,7 +158,7 @@ body {
 		}
 	}
 }
-//-------------------------------------------
+//-------------------------------------------------------
 .section-stock {
 	background-image: url(../img/bg-2.png);
 	background-size: cover;
@@ -174,13 +174,17 @@ body {
 }
 
 .slider {
-	display: flex;
-	justify-content: space-between;
-	margin-top: 95px;
+	margin-top: 92px;
+	&-child {
+		padding: 5px 10px;
+		box-sizing: border-box;
+		&:focus {
+			outline: none;
+		}
+	}
 	&-item {
 		border: 1px solid rgba($gray, $alpha);
 		border-radius: 20px;
-		flex: 0 0 32%;
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center center;
@@ -232,7 +236,7 @@ body {
 		bottom: 2.75rem;
 		left: 2.25rem;
 		max-width: 58%;
-		transform: translate(0, 243px);
+		transform: translate(0, 241px);
 		transition: 0.3s ease;
 		&__title {
 			font-size: 1.87rem;
@@ -258,6 +262,9 @@ body {
 				opacity: 1;
 				padding: 45px;
 			}
+			&:focus {
+				outline: none;
+			}
 			&::before {
 				content: "";
 				position: absolute;
@@ -271,3 +278,35 @@ body {
 		}
 	}
 }
+// слайдер ----------------------------------------------
+.slick-prev,
+.slick-next {
+	position: absolute;
+	background-color: transparent;
+	border: none;
+	top: -63px;
+	text-indent: -9999px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: block;
+	width: 10px;
+	height: 18px;
+	opacity: 0.4;
+	transition: 0.2s ease;
+	cursor: pointer;
+	&:hover {
+		opacity: 1;
+	}
+	&:focus {
+		outline: none;
+	}
+}
+.slick-prev {
+	right: 81px;
+	background-image: url(../img/arrow-prev.svg);
+}
+.slick-next {
+	right: 0;
+	background-image: url(../img/arrow-next.svg);
+}
+//-------------------------------------------------------
