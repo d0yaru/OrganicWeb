@@ -195,12 +195,25 @@ body {
 		background-position: center center;
 		min-height: 520px;
 		position: relative;
-		padding: 2.75rem 2.25rem;
+		padding: 2rem 2.25rem;
 		box-sizing: border-box;
 		box-shadow: 0 0 0 2px rgba($gray, 0);
 		transition: 0.3s ease;
 		overflow: hidden;
-		&:before {
+		&:hover {
+			box-shadow: 0 0 0 2px rgba($gray, $alpha);
+		}
+		&:hover {
+			.slider-text {
+				transform: translate(0, 0);
+			}
+		}
+	}
+	&-hover {
+		transition: 0.3s ease;
+		overflow: hidden;
+		padding: 2.75rem 2.25rem;
+		&::before {
 			content: "";
 			position: absolute;
 			top: 0;
@@ -215,14 +228,6 @@ body {
 		}
 		&:hover::before {
 			background-color: rgba($white, 0.55);
-		}
-		&:hover {
-			box-shadow: 0 0 0 2px rgba($gray, $alpha);
-		}
-		&:hover {
-			.slider-text {
-				transform: translate(0, 0);
-			}
 		}
 	}
 	&-text {
@@ -271,11 +276,23 @@ body {
 			}
 		}
 	}
+	&-thumb {
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+		height: 314px;
+		margin-bottom: 40px;
+		&__image {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			object-fit: cover;
+		}
+	}
 	// Фон разных карточек слайдера --------------------------------
 	&-milk {
 		background-image: url(../img/stock/milk.png);
-		background-position: 5.5rem 0.5rem;
-		background-size: 27rem;
 	}
 	&-coils {
 		background-image: url(../img/stock/coils.png);
@@ -385,116 +402,74 @@ body {
 //////////////////////   S E C T I O N  4   ///////////////////////
 //-----------------------------------------------------------------
 .section-new {
-	background-image: url(../img/bg-4.png);
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	padding-bottom: 160px;
 	&__text {
 		font-size: 1.5rem;
+		padding-top: 16px;
+		margin-bottom: -11px;
+	}
+}
+.slider-info {
+	&__title {
+		font-size: 1.87rem;
+		font-family: "Cormorant", serif;
+		margin-bottom: 26px;
+	}
+	&__description {
+		font-size: 1.12rem;
+		color: rgba($gray, 0.7);
 		line-height: 1.5;
-		margin-top: 35px;
+		margin-bottom: 0;
+		min-height: 52px;
+		max-width: 95%;
+	}
+	&__price {
+		font-size: 1.5rem;
+		margin-top: 28px;
 	}
 }
-// Карточки слайдера ----------------------------------------------
-.slider-new {
-	margin-top: 92px;
-	&-child {
-		padding: 0 10px;
-		box-sizing: border-box;
-	}
-	&-item {
-		border: 1px solid rgba($gray, $alpha);
-		border-radius: 20px;
-		background-repeat: no-repeat;
-		min-height: 590px;
-		position: relative;
-		padding: 44px 36px;
-	}
-	&-text {
-		position: absolute;
-		bottom: 44px;
-		max-width: 66%;
-		&__title {
-			font-size: 1.87rem;
-			font-family: "Cormorant", serif;
-			margin-bottom: 26px;
-		}
-		&__description {
-			color: rgba($gray, 0.7);
-			font-size: 18px;
-			line-height: 1.5;
-			min-height: 54px;
-		}
-		&__price {
-			color: $gray;
-			font-size: 22px;
-			letter-spacing: 0.4px;
-			padding-bottom: 15px;
-		}
-	}
-	// Фон разных карточек слайдера --------------------------------
-	&-milk2 {
-		background-image: url(../img/new/milk2.png);
-		background-position: 45% 6%;
-	}
-	&-egg {
-		background-image: url(../img/new/egg.png);
-		background-position: 50% 14%;
-	}
-	&-chicken {
-		background-image: url(../img/new/chicken.png);
-		background-position: 70% 16%;
-	}
-}
-//-----------------------------------------------------------------
-.slider-new-order {
+.slider-footer {
 	display: flex;
 	justify-content: space-between;
-	width: 390px;
-	&-item {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		width: 153px;
-		&__minus,
-		&__plus {
-			width: 50px;
-			height: 50px;
-			border: 2px solid $gray;
-			border-radius: 100%;
-			background-repeat: no-repeat;
-			background-position: 50% 50%;
-			cursor: pointer;
-			opacity: 0.4;
-			transition: 0.3s ease;
-			&:hover {
-				opacity: 1;
-			}
-		}
-		&__number {
-			font-size: 24px;
-		}
-		&__minus {
-			background-image: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAACBAMAAACapPCZAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAD1BMVEUnMA8nMA8nMA8nMA8AAAATWjTOAAAABHRSTlOdsKjAxF1VogAAAAFiS0dEBI9o2VEAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfkCRkKMDib04LrAAAAE0lEQVQI12NgFAQBAQZlYxAwAgAJzgG7UMaUbQAAAABJRU5ErkJggg==");
-		}
-		&__plus {
-			background-image: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOBAMAAADtZjDiAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAD1BMVEX///8nMA8nMA8nMA8AAACSDRm2AAAABHRSTlMAepDPkG/eJwAAAAFiS0dEBI9o2VEAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfkCRkKLiklIp3GAAAAH0lEQVQI12NgYGAQZIAAJWJoISUlYyUlRThNrD6oPQC6BgNT7PGCogAAAABJRU5ErkJggg==");
+	align-items: center;
+	margin-top: 32px;
+	margin-bottom: 8px;
+	&__btn {
+		border: none;
+		padding: 1.4rem 3.2rem;
+		cursor: pointer;
+		&:focus {
+			outline: none;
 		}
 	}
-	&__btn {
-		background-color: $orange;
-		padding: 21px 52px;
-		border-radius: 32px;
-		color: #ffffff;
-		text-decoration: none;
-		font-size: 17px;
-		text-transform: uppercase;
-		letter-spacing: 0.5px;
+}
+.slider-count {
+	display: flex;
+	align-items: center;
+	font-size: 1.5rem;
+	&__minus,
+	&__plus {
+		display: block;
+		width: 3.12rem;
+		height: 3.12rem;
+		background-repeat: no-repeat;
+		background-size: cover;
+		cursor: pointer;
+		opacity: 0.4;
 		transition: 0.2s ease;
 		&:hover {
-			background-color: $orangeHover;
+			opacity: 1;
 		}
+	}
+	&__number {
+		border: none;
+		width: 40px;
+		text-align: center;
+	}
+	&__minus {
+		background-image: url(../img/minus.svg);
+	}
+	&__plus {
+		background-image: url(../img/plus.svg);
 	}
 }
 //-----------------------------------------------------------------
