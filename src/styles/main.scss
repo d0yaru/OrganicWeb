@@ -39,6 +39,9 @@ body {
 .ml {
 	margin-left: 7.6rem;
 }
+.mr {
+	margin-right: 7.6rem;
+}
 .wrapper {
 	max-width: 1440px;
 	margin: 0 auto;
@@ -485,7 +488,7 @@ body {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	padding-bottom: 160px;
+	padding-bottom: 146px;
 	&__text {
 		font-size: 1.5rem;
 		line-height: 1.5;
@@ -566,41 +569,9 @@ body {
 			position: absolute;
 			left: 50%;
 			top: 50%;
-			height: 204px;
+			max-height: 204px;
 			transform: translate(-50%, -50%);
 			object-fit: cover;
-		}
-	}
-	&__button {
-		color: $gray;
-		text-transform: uppercase;
-		font-weight: 500;
-		letter-spacing: 0.075rem;
-		opacity: 0.8;
-		position: relative;
-		padding: 0 40px;
-		border: none;
-		background-color: transparent;
-		cursor: pointer;
-		margin-left: 44%;
-		margin-top: 48px;
-		transition: 0.2s ease;
-		&:hover {
-			opacity: 1;
-		}
-		&:focus {
-			outline: none;
-		}
-		&::before {
-			content: "";
-			position: absolute;
-			left: 0;
-			top: calc(50% - 0.93rem);
-			display: block;
-			width: 1.56rem;
-			height: 1.56rem;
-			background-repeat: no-repeat;
-			background-image: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAMAAADzN3VRAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABVlBMVEUnMA////8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8nMA8AAADQyxh+AAAAcXRSTlMAAAGfig3MwAxPiLHKslIOC2vCx8vDci61iUIXAkqSuDOTHSihyEhmBHw2CEZ9uw9EkSmmeMQyEQejVlyXCmKqH626IL69IiQ7q4dQlKwnPcVssG20e40rBY4sLzw5Jq6eWRIJFjFgqAZevF9AeqK5QStLptUAAAABYktHRHGvB1ziAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH5AsEESgWDd6HzgAAATlJREFUKM9t0tdSwkAUBuCTEH4iREUDNhArxSioFHtEUWxYomJXsBsL6PtfuSCBIDkXO7P77ewps0S8TSBTcEYQ2eFgB2Kb0yVBahc6OpvE3dUNQHZ42OrtERvS2wepf8DnJ/INBoChYUMkGSOj9Txj4wiGagKEeVMFkQkElYpMeiAJU6KpNj6K2DQTmgnILPtsvFF1JIEkV92JISGFpKmfOQTnjUcWFLu500Us0fKKSq0zWIVAaaxZiIJ1ysBuIRvYpKylbCHLXtu2kB3s0h5yFhKGk3LYbxX+gN0XvThskSNoLPsxbJF/op7glE1HzeOMbxL/OfLuytwuNEQvTaJeQbvmqhNVUkjc1OXWBe2O+xMqFIH7h/jj0/PL6xtQLHCGkP4egxEfnzrXEGZfpfK3I1Mu/ei1X/ULMKMk9j3a5/AAAAAASUVORK5CYII=");
 		}
 	}
 }
@@ -666,6 +637,105 @@ body {
 	}
 	&__plus {
 		background-image: url(../img/plus.svg);
+	}
+}
+.btn-load {
+	background-color: transparent;
+	border: none;
+	text-transform: uppercase;
+	position: relative;
+	opacity: 0.8;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	padding-left: 2.43rem;
+	letter-spacing: 0.06rem;
+	cursor: pointer;
+	margin-top: 41px;
+	transition: 0.2s ease;
+	&:hover {
+		opacity: 1;
+	}
+	&:focus {
+		outline: none;
+	}
+	&::before {
+		content: "";
+		display: block;
+		width: 1.56rem;
+		height: 1.56rem;
+		background-image: url(../img/refresh.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+		position: absolute;
+		left: 0;
+		top: calc(50% - 0.78rem);
+	}
+}
+//-----------------------------------------------------------------
+//////////////////////   S E C T I O N  6   ///////////////////////
+//-----------------------------------------------------------------
+.section-delivery {
+	background-image: url(../img/bg-6.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding-bottom: 160px;
+}
+.box-delivery {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 65px;
+	&-item {
+		flex: 0 0 49%;
+		&:last-child {
+			flex: 0 0 41%;
+		}
+	}
+	&__text {
+		font-size: 1.12rem;
+		line-height: 1.5;
+		margin-bottom: 28px;
+		margin-top: 9px;
+	}
+	&__link {
+		color: $gray;
+		border-bottom: 1px solid $gray;
+		text-decoration: none;
+	}
+	&__span {
+		color: $orange;
+	}
+}
+.box-delivery-list {
+	display: flex;
+	margin-top: 50px;
+	&__item {
+		list-style-type: none;
+	 	display: block;
+		background-repeat: no-repeat;
+		margin-right: 32px;
+		cursor: pointer;
+	 	opacity: 0.4;
+	 	transition: 0.2s ease;
+	 	&:hover {
+	 		opacity: 1;
+	 	}
+	 }
+	 &__mc {
+		 width: 53px;
+		 height: 32px;
+		 background-image: url(../img/mc.png);
+	 }
+	 &__visa {
+		width: 74px;
+		height: 23px;
+		background-image: url(../img/visa.png);
+	}
+	&__paypal {
+		width: 87px;
+		height: 24px;
+		background-image: url(../img/paypal.png);
 	}
 }
 //-----------------------------------------------------------------
