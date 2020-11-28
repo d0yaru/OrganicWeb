@@ -19,13 +19,22 @@
 		flex: 0 0 66.4%;
 	}
 	&-list {
+		font-size: 1.12rem;
 		list-style-type: none;
 		&__link {
 			text-decoration: none;
 			color: $gray;
+			transition: 0.3s ease;
+			&:hover {
+				color: $orange;
+			}
 	  }
 	  &__tel {
 			font-size: 1.68rem;
+			transition: 0.3s ease;
+			&:hover {
+				color: $orange;
+			}
 	  }
   }
 }
@@ -44,6 +53,10 @@
 		background-repeat: no-repeat;
 		background-position: center center;
 		margin: 0 auto 0.9rem;
+		opacity: 0.8;
+		&:hover {
+			opacity: 1;
+		}
 	}
 	&__vk {
 		background-size: 23px;
