@@ -1828,5 +1828,150 @@ body {
 }
 
 //-----------------------------------------------------------------
+.modal-header {
+	border-bottom: none;
+}
+
+.modal-dialog {
+	margin: 0;
+	max-width: none;
+}
+
+.modal-content {
+	border: none;
+	border-radius: 0;
+	height: 490px;
+
+	@media (max-width: 576px) {
+		height: 406px;
+	}
+}
+
+.close span {
+	&::before {
+		content: "";
+		display: block;
+		width: 30px;
+		height: 30px;
+		border: 2px solid $gray;
+		border-radius: 100%;
+		position: absolute;
+		right: 8px;
+		top: 15px;
+	}
+}
+
+.modal-body {
+	&__list {
+		list-style-type: none;
+		margin-top: -10px;
+		margin-bottom: 38px;
+
+		font-size: 1.6rem;
+
+		@media (max-width: 576px) {
+			font-size: 1rem;
+		}
+	}
+
+	&__item {
+		margin-bottom: 22px;
+	}
+
+	&__link {
+		cursor: pointer;
+		color: $gray;
+
+		&:hover {
+			color: $orange;
+			text-decoration: none;
+		}
+	}
+}
+
+//-----------------------------------------------------------------
+.modal-basket {
+	border-radius: 17px;
+	width: 274px;
+	padding: 0 15px 5px 64px;
+	background-image: url(../img/new/bottle.png);
+	background-size: 64px;
+	background-repeat: no-repeat;
+	background-position: 0;
+	box-shadow: -2px 14px 25px 14px rgba(10, 10, 10, 0.1);
+	position: absolute;
+	top: 108px;
+	right: 9%;
+	background-color: #fff;
+
+	&__btn {
+		background-color: transparent;
+		border: none;
+		position: relative;
+		left: 176px;
+		top: 5px;
+
+		&::before {
+			content: "";
+			width: 0;
+			height: 0;
+			border-left: 15px solid transparent;
+			border-right: 15px solid transparent;
+			border-bottom: 25px solid #fff;
+			position: absolute;
+			right: 38px;
+			top: -21px;
+		}
+	}
+
+	&__link {
+		color: $gray;
+		border-bottom: 1px solid rgba($gray, 0.4);
+	}
+
+	@media (max-width: 992px) {
+		display: none;
+	}
+}
+
+.modal-popup {
+	border-radius: 17px;
+	width: 239px;
+	padding: 9px 13px 2px 31px;
+	box-shadow: -2px 14px 25px 14px rgba(10, 10, 10, 0.1);
+	position: absolute;
+	top: 385px;
+	right: 6%;
+	background-color: #fff;
+
+	&__btn {
+		background-color: transparent;
+		border: none;
+		position: relative;
+		left: 176px;
+		top: 5px;
+	}
+
+	&__title {
+		font-size: 1.5rem;
+		font-family: "Cormorant", serif;
+		margin-bottom: 0;
+	}
+
+	&__text {
+		font-size: 0.9rem;
+		opacity: 0.6;
+	}
+
+	&__price {
+		font-size: 1rem;
+	}
+
+	@media (max-width: 992px) {
+		display: none;
+	}
+}
+
+//-----------------------------------------------------------------
 ///////////////////////////////////////////////////////////////////
 //-----------------------------------------------------------------
